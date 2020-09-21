@@ -1,4 +1,4 @@
-# soundcloud-api
+# Soundcloud-api
 IT4045 Project Repository
 
 ## Introduction
