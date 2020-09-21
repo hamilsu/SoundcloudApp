@@ -18,20 +18,36 @@ Frontend with bootstrap and VUE.js for reactivity
 ## Functional Requirement
 
 **Given** user wants to register
+
 **When** they enter their desired username and password 
+
 **Then** user is added to the noSQL database
 
+
+
 **Given** user wants to log in
+
 **When** they enter their already registered credentials
+
 **Then** user logs in 
 
+
+
 **Given** a user wants to search by songs (by Genre, Labelname, user, release date)
+
 **When** they enter their specifications into the search fields
+
 **Then** the returned songs will be displayed in a table
 
+
+
 **Given** a user wants to favorite / save a song
+
 **When** they click “favorite” 
+
 **Then** search parameters to retrieve the song are saved to database for future and displayed to user in a list
+
+
 
 ## Class Diagram
 ![ClassDiagram](https://user-images.githubusercontent.com/55035232/93726319-614dd600-fb83-11ea-8984-5c3740f2d723.PNG)
@@ -72,17 +88,17 @@ Frontend with bootstrap and VUE.js for reactivity
   "user": 
   
   {
-    "id": 3699101,
+   "id": 3699101,
     
-    "permalink": "user2835985",
+   "permalink": "user2835985",
     
-    "username": "user2835985",
+   "username": "user2835985",
     
-    "uri": "https://api.soundcloud.com/users/3699101",
+   "uri": "https://api.soundcloud.com/users/3699101",
     
-    "permalink_url": "https://soundcloud.com/user2835985",
+   "permalink_url": "https://soundcloud.com/user2835985",
     
-    "avatar_url": "https://a1.sndcdn.com/images/default_avatar_large.png?142a848"
+   "avatar_url": "https://a1.sndcdn.com/images/default_avatar_large.png?142a848"
     
   },
   
@@ -113,7 +129,7 @@ Frontend with bootstrap and VUE.js for reactivity
   "password": string  
 }
 
-**Get song with selected details (gets song with users search query from soundcloud)** 
+**Get song with selected details (gets song with users search query from SoundCloud)** 
 
 *Endpoint: /getSong POST* 
 
@@ -131,10 +147,12 @@ Frontend with bootstrap and VUE.js for reactivity
 ## Scrum Roles 
  
 **UI Specialist**: Matthew Dupont
+
 **Business Logic and Persistence Expert**: Storm Hamilton
+
 **Product Owner/Scrum Master/DevOps/GitHub Administrator**: David Moody
     
-## Guthub Project Link
+## Github Project Link
 https://github.com/moodydi/SoundcloudApp
 
 ## JIRA board
