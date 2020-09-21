@@ -7,6 +7,7 @@ Our app will utilize the soundcloud API and allow for a better way to organize p
 
 ## Storyboard
 Frontend with bootstrap and VUE.js for reactivity
+
 ![Storyboard 1](https://user-images.githubusercontent.com/55035232/93726478-50ea2b00-fb84-11ea-8f24-1465de54c8b0.png)
 ![Storyboard 2](https://user-images.githubusercontent.com/55035232/93726481-521b5800-fb84-11ea-9d73-ba484b4b5a52.png)
 ![Storyboard 3](https://user-images.githubusercontent.com/55035232/93726484-53e51b80-fb84-11ea-923f-aa2961ab83a6.png)
@@ -43,26 +44,48 @@ Frontend with bootstrap and VUE.js for reactivity
 
 {
   "id": 13158665,
+  
   "created_at": "2011/04/06 15:37:43 +0000",
+  
   "user_id": 3699101,
+  
   "description": null,
+  
   "genre": null,
+  
   "release": null,
+  
   "title": "Munching at Tiannas house",
+  
   "release_year": null,
+  
   "release_month": null,
+  
   "release_day": null,
+  
   "permalink_url": "https://soundcloud.com/user2835985/munching-at-tiannas-house",
+  
   "artwork_url": null,
+  
   "waveform_url": "https://w1.sndcdn.com/fxguEjG4ax6B_m.png",
-  "user": {
+  
+  "user": 
+  
+  {
     "id": 3699101,
+    
     "permalink": "user2835985",
+    
     "username": "user2835985",
+    
     "uri": "https://api.soundcloud.com/users/3699101",
+    
     "permalink_url": "https://soundcloud.com/user2835985",
+    
     "avatar_url": "https://a1.sndcdn.com/images/default_avatar_large.png?142a848"
+    
   },
+  
   "stream_url": "https://api.soundcloud.com/tracks/13158665/stream"
 }
 
@@ -71,7 +94,9 @@ Frontend with bootstrap and VUE.js for reactivity
 *Endpoint: /register POST* 
 
 {
+
   "username": string,
+  
   "password": string  
 }
 
@@ -84,6 +109,7 @@ Frontend with bootstrap and VUE.js for reactivity
 
 {
   "username": string,
+  
   "password": string  
 }
 
@@ -93,8 +119,11 @@ Frontend with bootstrap and VUE.js for reactivity
 
 {
   "name": string,
+  
   "genre": string,
+  
   "releaseDate": datetime,
+  
   “user”: string
 }
 
@@ -105,7 +134,7 @@ Frontend with bootstrap and VUE.js for reactivity
 **Business Logic and Persistence Expert**: Storm Hamilton
 **Product Owner/Scrum Master/DevOps/GitHub Administrator**: David Moody
     
-## Github Project Link
+## Guthub Project Link
 https://github.com/moodydi/SoundcloudApp
 
 ## JIRA board
