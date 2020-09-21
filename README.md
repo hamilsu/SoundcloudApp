@@ -105,7 +105,7 @@ Frontend with bootstrap and VUE.js for reactivity
 **Business Logic and Persistence Expert**: Storm Hamilton
 **Product Owner/Scrum Master/DevOps/GitHub Administrator**: David Moody
     
-## Guthub Project Link
+## Github Project Link
 https://github.com/moodydi/SoundcloudApp
 
 ## JIRA board
