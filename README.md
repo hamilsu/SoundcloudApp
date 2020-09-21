@@ -23,7 +23,7 @@ Frontend with bootstrap and VUE.js for reactivity
 
 **Then** user is added to the noSQL database
 
-
+------------------------------------------------------
 
 **Given** user wants to log in
 
@@ -31,7 +31,7 @@ Frontend with bootstrap and VUE.js for reactivity
 
 **Then** user logs in 
 
-
+------------------------------------------------------
 
 **Given** a user wants to search by songs (by Genre, Labelname, user, release date)
 
@@ -39,15 +39,15 @@ Frontend with bootstrap and VUE.js for reactivity
 
 **Then** the returned songs will be displayed in a table
 
-
-
+------------------------------------------------------
+ 
 **Given** a user wants to favorite / save a song
 
 **When** they click “favorite” 
 
 **Then** search parameters to retrieve the song are saved to database for future and displayed to user in a list
 
-
+------------------------------------------------------
 
 ## Class Diagram
 ![ClassDiagram](https://user-images.githubusercontent.com/55035232/93726319-614dd600-fb83-11ea-8984-5c3740f2d723.PNG)
