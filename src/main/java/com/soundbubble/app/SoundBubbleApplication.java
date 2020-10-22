@@ -1,13 +1,13 @@
-package com.statcloud.app;
+package com.soundbubble.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StatcloudApplication {
+public class SoundBubbleApplication {
 
     public static void main(String[] args) {
-            SpringApplication.run(StatcloudApplication.class, args);
+            SpringApplication.run(SoundBubbleApplication.class, args);
         }
 
     }
