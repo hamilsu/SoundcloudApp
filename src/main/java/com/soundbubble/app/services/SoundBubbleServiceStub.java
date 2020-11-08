@@ -2,6 +2,7 @@ package com.soundbubble.app.services;
 
 
 
+import com.soundbubble.app.dto.Song;
 import com.soundbubble.app.dto.User;
 import org.springframework.stereotype.Component;
 
@@ -15,13 +16,15 @@ public class SoundBubbleServiceStub implements ISoundBubbleService {
     List<User> userList = new LinkedList<User>();
 
     @Override
-    public void fetchSongByPermalink(String permalink) {
+    public Song fetchSongByPermalink(String permalink) {
 
+        return null;
     }
 
     @Override
-    public void fetchSongByStream(String steam_url) {
+    public Song fetchSongByStream(String stream_url) {
 
+        return null;
     }
 
     @Override
@@ -36,7 +39,7 @@ public class SoundBubbleServiceStub implements ISoundBubbleService {
 
     @Override
     public void saveNewUser(User newUser) {
-
+        userList.add(newUser);
     }
 
     @Override

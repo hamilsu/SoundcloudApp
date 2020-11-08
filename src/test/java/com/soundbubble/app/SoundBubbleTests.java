@@ -1,6 +1,8 @@
 package com.soundbubble.app;
 
+import com.soundbubble.app.dao.ISongDAO;
 import com.soundbubble.app.dao.IUserDAO;
+import com.soundbubble.app.dto.Song;
 import com.soundbubble.app.dto.User;
 import com.soundbubble.app.services.ISoundBubbleService;
 import com.soundbubble.app.services.IUserService;
@@ -18,14 +20,25 @@ public class SoundBubbleTests {
     @Autowired
     private IUserService userServiceStub;
     private ISoundBubbleService soundBubbleServiceStub;
-    private IUserDAO UserDAO;
-    private User newUser;
+    private IUserDAO userDAO;
+    private ISongDAO songDAO;
+    private User user;
+    private Song song;
 
+    private boolean isLoggedIn;
 
     @Test
-    void WhenUserSavesNewSongToFavorites(){
+    void GivenUserSavesNewSongToFavorites(){
+        user = new User ("Billy","Bob");
+        song = WhenUserClicksSaveSong();
+        Song copySong = new Song(song);
+        ThenSaveSongToUser(user,song);
 
+        Assert.assertEquals(user.favoritesList.remove(0),copySong);
     }
+
+
+
 
     @Test
     void GivenUserSignsUp(){
@@ -34,8 +47,6 @@ public class SoundBubbleTests {
         String password = "PLACEHOLDER";
         WhenUserEntersNewNameAndPassword(username, password,22);
         ThenSaveNewUser();
-
-
         try {
             Assert.assertEquals(testerUser, soundBubbleServiceStub.fetchUserByID(22));
         }
@@ -72,22 +83,27 @@ public class SoundBubbleTests {
     }
 
     private String[] WhenThereIsSubmittedCredentials() {
-        String username = UserDAO.fetchUsername();
-        String password = UserDAO.fetchPassword();
+        String username = userDAO.fetchUsername();
+        String password = userDAO.fetchPassword();
         String nameAndPass[] = {username,password};
         return nameAndPass;
     }
 
 
     private void ThenSaveNewUser() {
-        soundBubbleServiceStub.saveNewUser(newUser);
-
+        soundBubbleServiceStub.saveNewUser(user);
     }
 
     private void WhenUserEntersNewNameAndPassword(String username, String password, int id) {
-    newUser = userServiceStub.createNewUserWithPredeterminedID(username, password,id);
+    user = userServiceStub.createNewUserWithPredeterminedID(username, password,id);
+    }
+    private Song WhenUserClicksSaveSong() {
+        //Honestly I'm not sure how we'll end up fetching the song at the moment. I'd assume when they click the button they'd already be at the song so we'd just fetch the URL they're at?
+        return soundBubbleServiceStub.fetchSongByStream("streamURL");
     }
 
-
+    private void ThenSaveSongToUser(User user, Song song) {
+        user.favoritesList.add(song);
+    }
 
 }
