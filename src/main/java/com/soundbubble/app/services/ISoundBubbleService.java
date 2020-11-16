@@ -19,7 +19,7 @@ public interface ISoundBubbleService {
 
     public void saveNewUser(User newUser);
 
-    public User fetchUserByID(int id) throws NoSuchElementException;
+   // public User fetchUserByID(int id) throws NoSuchElementException;
 
     User fetchUserByName(String name) throws NoSuchElementException;
 }

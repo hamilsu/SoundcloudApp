@@ -42,11 +42,11 @@ public class SoundBubbleServiceStub implements ISoundBubbleService {
         userList.add(newUser);
     }
 
-    @Override
-    public User fetchUserByID(int id) throws NoSuchElementException {
-        User foundUser = userList.stream().filter(x->x.id == id).findAny().orElseThrow();
-        return foundUser;
-    }
+//    @Override
+//    public User fetchUserByID(int id) throws NoSuchElementException {
+//        User foundUser = userList.stream().filter(x->x.id == id).findAny().orElseThrow();
+//        return foundUser;
+//    }
 
     @Override
     public User fetchUserByName(String name) throws NoSuchElementException {
