@@ -1,7 +1,7 @@
 package com.soundbubble.app.dto;
 
 import lombok.Data;
-
+//random bs to test push
 public @Data
 class SCUser {
     private String id;
