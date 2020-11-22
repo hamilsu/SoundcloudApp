@@ -4,6 +4,8 @@ package com.soundbubble.app.services;
 import com.soundbubble.app.dto.Song;
 import com.soundbubble.app.dto.User;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public interface ISoundBubbleService {
@@ -22,4 +24,6 @@ public interface ISoundBubbleService {
    // public User fetchUserByID(int id) throws NoSuchElementException;
 
     User fetchUserByName(String name) throws NoSuchElementException;
+
+    List<Song> fetchSongs(String searchTerm) throws IOException;
 }

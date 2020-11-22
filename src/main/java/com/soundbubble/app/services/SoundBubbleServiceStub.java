@@ -53,4 +53,10 @@ public class SoundBubbleServiceStub implements ISoundBubbleService {
         User foundUser = userList.stream().filter(x->x.username.equals(name)).findAny().orElseThrow();
         return foundUser;
     }
+
+    //TODO: Implement search feature. Hopefully Matthew has some experience with this since we're essentially trying to search the SoundCloud database, not our own.
+    @Override
+    public List<Song> fetchSongs(String searchTerm) throws IOException {
+        return null;
+    }
 }

@@ -25,4 +25,10 @@ public @Data class Song {
         this.artist = song.artist;
         this.stream_url = song.stream_url;
     }
+
+
+    //TODO: Create new string method to only return more vital information such as name, artist, and possibly the artwork or genre
+    public String toString(){
+        return null;
+    }
 }
