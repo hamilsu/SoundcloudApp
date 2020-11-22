@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -67,7 +68,7 @@ public class SoundBubbleController {
         }
     }
 
-        @GetMapping("/song/{streamLink}")
+        @GetMapping("/song/{streamLink}/")
         public ResponseEntity fetchSongByStream(@PathVariable("streamLink") String streamLink){
         Song foundSong = soundBubbleService.fetchSongByStream(streamLink);
         //I'm not entirely sure if this header is correct for the purposes of this method
@@ -97,5 +98,13 @@ public class SoundBubbleController {
             }
             return allSongNames;
         }
+
+        @GetMapping("/{username}/favorites/")
+        public ModelAndView showFavoritesList(@PathVariable ("username") String username){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Favorites");
+        User user = soundBubbleService.fetchUserByName(username);
+        modelAndView.addObject("favorites",user.favoritesList);
+        return modelAndView;
     }
 }
