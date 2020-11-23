@@ -42,13 +42,13 @@ public class SoundBubbleTests {
 
     @Test
     void GivenUserSignsUp(){
-        User testerUser = new User("PLACEHOLDER","PLACEHOLDER");
-        String username = "PLACEHOLDER";
+        User testerUser = new User("FAKENAME","PLACEHOLDER");
+        String username = "FAKENAME";
         String password = "PLACEHOLDER";
         WhenUserEntersNewNameAndPassword(username, password,22);
         ThenSaveNewUser();
         try {
-            Assert.assertEquals(testerUser, soundBubbleServiceStub.fetchUserByID(22));
+            Assert.assertEquals(testerUser, soundBubbleServiceStub.fetchUserByName("FAKENAME"));
         }
         catch (NoSuchElementException e){
             Assert.fail("Error: User not found with that id");
