@@ -23,7 +23,7 @@ public interface ISoundBubbleService {
 
    // public User fetchUserByID(int id) throws NoSuchElementException;
 
-    User fetchUserByName(String name) throws NoSuchElementException;
+    public User fetchUserByName(String name) throws NoSuchElementException;
 
-    List<Song> fetchSongs(String searchTerm) throws IOException;
+    public List<Song> fetchSongs(String searchTerm) throws IOException;
 }

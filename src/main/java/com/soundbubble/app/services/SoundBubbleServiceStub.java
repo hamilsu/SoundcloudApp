@@ -6,6 +6,7 @@ import com.soundbubble.app.dto.Song;
 import com.soundbubble.app.dto.User;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
