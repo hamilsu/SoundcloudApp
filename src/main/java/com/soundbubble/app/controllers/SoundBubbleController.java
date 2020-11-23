@@ -88,8 +88,8 @@ public class SoundBubbleController {
                 List<Song> Songs = soundBubbleService.fetchSongs(term);
                 for (Song Song: Songs) {
                     LabelValueForSongs LabelValueForSongs = new LabelValueForSongs();
-                    LabelValueForSongs.setLabel(Song.toString());
-                    LabelValueForSongs.setValue(Song.getStream_Url());
+                    LabelValueForSongs.setName(Song.toString());
+                    LabelValueForSongs.setStream_Url(Song.getStream_Url());
                     allSongNames.add(LabelValueForSongs);
                 }
             } catch (IOException e) {
